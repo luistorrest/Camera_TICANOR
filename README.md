@@ -26,16 +26,5 @@ Before running this code, make sure you have the following dependencies installe
 
 6. Press 'q' in any of the windows to exit the program.
 
-## Customization
-
-You can customize the code to work with your specific camera or color scheme by modifying the `band_colors` array in the `recognize_bands` method.
-
-```python
-# Define the colors of the four bands
-band_colors = np.array([ [0, 0, 255],  # Red
- [0, 255, 0],  # Green
- [255, 0, 0],  # Blue
- [255, 255, 0]  # NIR
-])
 
 
