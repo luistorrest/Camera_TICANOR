@@ -1,0 +1,75 @@
+\hypertarget{classtest__Camera_1_1SequoiaMultispectralCamera}{}\doxysection{test\+\_\+\+Camera.\+Sequoia\+Multispectral\+Camera Class Reference}
+\label{classtest__Camera_1_1SequoiaMultispectralCamera}\index{test\_Camera.SequoiaMultispectralCamera@{test\_Camera.SequoiaMultispectralCamera}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classtest__Camera_1_1SequoiaMultispectralCamera_acd77f4f2e118db1921e50a85faa664a2}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classtest__Camera_1_1SequoiaMultispectralCamera_a88ff61d342b407cfd8677c10a0abee88}{image\+\_\+callback}} (self, msg)
+\item 
+def \mbox{\hyperlink{classtest__Camera_1_1SequoiaMultispectralCamera_ab0420a3232bbf915d2186ec42b75befe}{recognize\+\_\+bands}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtest__Camera_1_1SequoiaMultispectralCamera_a64dbad9be2b4a401326dcdc5f76baca2}\label{classtest__Camera_1_1SequoiaMultispectralCamera_a64dbad9be2b4a401326dcdc5f76baca2}} 
+{\bfseries bridge}
+\item 
+\mbox{\Hypertarget{classtest__Camera_1_1SequoiaMultispectralCamera_aed264813993cfaee60a63d8857d82773}\label{classtest__Camera_1_1SequoiaMultispectralCamera_aed264813993cfaee60a63d8857d82773}} 
+{\bfseries image\+\_\+sub}
+\item 
+\mbox{\Hypertarget{classtest__Camera_1_1SequoiaMultispectralCamera_acc54b4f1a13889fd5a18ac8fbc43171b}\label{classtest__Camera_1_1SequoiaMultispectralCamera_acc54b4f1a13889fd5a18ac8fbc43171b}} 
+{\bfseries image}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtest__Camera_1_1SequoiaMultispectralCamera_acd77f4f2e118db1921e50a85faa664a2}\label{classtest__Camera_1_1SequoiaMultispectralCamera_acd77f4f2e118db1921e50a85faa664a2}} 
+\index{test\_Camera.SequoiaMultispectralCamera@{test\_Camera.SequoiaMultispectralCamera}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!test\_Camera.SequoiaMultispectralCamera@{test\_Camera.SequoiaMultispectralCamera}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def test\+\_\+\+Camera.\+Sequoia\+Multispectral\+Camera.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initializes the SequoiaMultispectralCamera class.
+
+This class interfaces with a multispectral camera, subscribes to image messages,
+and provides methods for recognizing the individual spectral bands.
+
+Attributes:
+    bridge: CvBridge object for image message conversion.
+    image_sub: ROS subscriber for the raw image topic.
+    image: Current image received from the camera.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtest__Camera_1_1SequoiaMultispectralCamera_a88ff61d342b407cfd8677c10a0abee88}\label{classtest__Camera_1_1SequoiaMultispectralCamera_a88ff61d342b407cfd8677c10a0abee88}} 
+\index{test\_Camera.SequoiaMultispectralCamera@{test\_Camera.SequoiaMultispectralCamera}!image\_callback@{image\_callback}}
+\index{image\_callback@{image\_callback}!test\_Camera.SequoiaMultispectralCamera@{test\_Camera.SequoiaMultispectralCamera}}
+\doxysubsubsection{\texorpdfstring{image\_callback()}{image\_callback()}}
+{\footnotesize\ttfamily def test\+\_\+\+Camera.\+Sequoia\+Multispectral\+Camera.\+image\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Callback function for handling incoming image messages.
+
+Args:
+    msg (sensor_msgs.msg.Image): The raw image message.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classtest__Camera_1_1SequoiaMultispectralCamera_ab0420a3232bbf915d2186ec42b75befe}\label{classtest__Camera_1_1SequoiaMultispectralCamera_ab0420a3232bbf915d2186ec42b75befe}} 
+\index{test\_Camera.SequoiaMultispectralCamera@{test\_Camera.SequoiaMultispectralCamera}!recognize\_bands@{recognize\_bands}}
+\index{recognize\_bands@{recognize\_bands}!test\_Camera.SequoiaMultispectralCamera@{test\_Camera.SequoiaMultispectralCamera}}
+\doxysubsubsection{\texorpdfstring{recognize\_bands()}{recognize\_bands()}}
+{\footnotesize\ttfamily def test\+\_\+\+Camera.\+Sequoia\+Multispectral\+Camera.\+recognize\+\_\+bands (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Recognizes and separates the spectral bands from the captured image.
+
+This method splits the input image into its constituent spectral bands based on
+predefined colors and returns them as separate masks.
+
+Returns:
+    list: A list of numpy arrays representing the spectral band masks.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+test\+\_\+\+Camera.\+py\end{DoxyCompactItemize}
